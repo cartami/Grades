@@ -28,45 +28,49 @@ class Message{
       // Display the grade.
       System.out.println("Using if/else statements your grade is " + grade);
 
-      score=65;    // To hold a test score
-      switch(score/10) {
-        // for >= 90
-        case 10:
-        case 9:
-           grade = 'A';
+      score=5;    // num 1-7
+      String day;
+      switch(score) {
+        case 1:
+        day = "Monday";
            break;
-        // for >= 80 and <90
-        case 8:
-           grade = 'B';
+        case 2:
+        day = "Tuesday";
            break;
-        // for >= 70 and <80
-        case 7:
-           grade = 'C';
+        case 3:
+        day = "Wednesday";
            break;
-        // for >= 60 and <70
-        case 6:
-           grade = 'D';
+        case 4:
+        day = "Thursday";
            break;
-        // for >= 50 and <60
         case 5:
-           grade = 'E';
+        day = "Friday";
            break;
-        // for < 50
-        default:
-           grade = 'F';
+        case 6:
+        day = "Saturday";
+           break;
+        case 7:
+        day = "Sunday";
+           break;
+       default:
+        day = "No day selected";
            break;
       }
       
       // display result
-      System.out.println("Using switch statement the Grade is " + grade);
-
+      System.out.println("Using switch statement the day is " + day);
+      
+      String oddOrEven;
       int num=5;
-
     /* If number is divisible by 2 then it's an even number
      * else odd number*/
     if ( num % 2 == 0 )
-        System.out.println("Using odd/even the num entered number is even");
-     else
-        System.out.println("Using odd/even the num entered number is odd");
+    {
+      oddOrEven = (num==2||num==3||num==4||num==5) ? "Cool": "Not Cool";
+      oddOrEven = (num>=6&&num<=20) ? "Cool": "Cool";
+      oddOrEven = (num>20) ? "Not Cool": "Cool";
+    }else
+    oddOrEven ="Cool";
+    System.out.println(oddOrEven);
     }
 }
